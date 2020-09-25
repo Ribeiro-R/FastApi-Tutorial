@@ -1,62 +1,65 @@
-<h1>Installing virtualenv</h1>
+# Virtualenv
 
-<p>virtualenv is used to manage Python packages for different projects.
+## Installing virtualenv
+
+virtualenv is used to manage Python packages for different projects.
 Using virtualenv allows you to avoid installing Python packages globally
 which could break system tools or other projects. You can install virtualenv
-using pip.</p>
+using pip.
 
-<p>On Linux:</p>
+On Linux:
 
-```
-$ python3 -m pip install --user virtualenv
-```
+~~~bash
+python3 -m pip install --user virtualenv
+~~~
 
-<h1>Creating a virtual environment</h1>
-<p>venv (for Python 3) allow you to manage separate package installations for different projects. They essentially allow you to create a “virtual” isolated Python installation and install packages into that virtual installation. When you switch projects, you can simply create a new virtual environment and not have to worry about breaking the packages installed in the other environments. It is always recommended to use a virtual environment while developing Python applications.</p>
+## Creating a virtual environment
 
-<p>On Linux:</p>
+venv (for Python 3) allow you to manage separate package installations for different projects. They essentially allow you to create a “virtual” isolated Python installation and install packages into that virtual installation. When you switch projects, you can simply create a new virtual environment and not have to worry about breaking the packages installed in the other environments. It is always recommended to use a virtual environment while developing Python applications.
 
-```
-$ python3 -m venv env
-```
+On Linux:
 
-<h1>Activating a virtual environment</h1>
+~~~bash
+python3 -m venv env
+~~~
 
-<p>Before you can start installing or using packages in your virtual environment you’ll need to activate it. Activating a virtual environment will put the virtual environment-specific python and pip executables into your shell’s PATH.</p>
+## Activating a virtual environment
 
-<p>On Linux:</p>
+Before you can start installing or using packages in your virtual environment you’ll need to activate it. Activating a virtual environment will put the virtual environment-specific python and pip executables into your shell’s PATH.
 
-```
-$ source env/bin/activate
-```
+On Linux:
 
+~~~bash
+source env/bin/activate
+~~~
 
-<h1>Leaving the virtual environment</h1>
+## Leaving the virtual environment
 
-<p>If you want to switch projects or otherwise leave your virtual environment, simply run:</p>
+If you want to switch projects or otherwise leave your virtual environment, simply run:
 
-```
-$ deactivate
-```
+~~~bash
+deactivate
+~~~
 
-<h1>Installing packages using requirements files</h1>
+## Installing packages using requirements files
 
-<p>For example you could create a requirements.txt file containing:</p>
+For example you could create a requirements.txt file containing:
 
-```
+~~~bash
 fastapi
 uvicorn
-```
-<p>And tell pip to install all of the packages in this file using the -r flag:</p>
+~~~
 
-```
-$ pip install -r requirements.txt
-```
+And tell pip to install all of the packages in this file using the -r flag:
 
-<h1>Freezing dependencies</h1>
+~~~bash
+pip install -r requirements.txt
+~~~
 
-<p>Pip can export a list of all installed packages and their versions using the freeze command:</p>
+## Freezing dependencies
 
-```
-$ pip freeze
-```
+Pip can export a list of all installed packages and their versions using the freeze command:
+
+~~~bash
+pip freeze
+~~~
